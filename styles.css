@@ -1,4 +1,4 @@
-  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
  * {
@@ -26,7 +26,6 @@
      background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.00), rgba(0, 0, 0, 1)), url(https://media.discordapp.net/attachments/754655109312675872/987790994323931217/IMG_2200.png);
      height: 60vh;
      background-color: #A2989A;
-     padding-left: 30px;
      font-size: 30px;
      display: flex;
  }
@@ -35,6 +34,7 @@
      align-self: flex-end;
      font-family: 'Special Elite', cursive;
      grid-area: header;
+     width: 100vw;
  }
  
  .txt-type {
@@ -46,22 +46,21 @@
      color: #FCF7F8;
      display: flex;
      justify-content: space-evenly;
-     width: 100%;
+     width: 100vw;
+     height: 6vh;
      font-family: 'Barriecito', cursive;
      font-size: 30px;
      grid-area: nav;
      z-index: 100;
+     position: sticky;
  }
- 
- .content {
-     padding-left: 16px;
- }
+ /* The sticky class is added to the navbar with JS when it reaches its scroll position */
  
  .sticky {
      position: fixed;
      top: 0;
-     width: 100%
  }
+ /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
  
  .txt-type>.txt {
      border-right: 0.2rem solid #FFC5CD;
@@ -94,7 +93,7 @@
  #content {
      display: grid;
      justify-content: stretch;
-     grid-template-areas: "pfp desc desc" "rundown rundown rundown";
+     grid-template-areas: "pfp desc desc" "rundown rundown rundown" "more null spotify";
      grid-template-columns: 1fr 1fr 1fr;
      margin-top: 5em;
      row-gap: 4em;
@@ -148,6 +147,7 @@
  
  .spotify {
      border: 6px solid #000000;
+     grid-area: spotify;
  }
  
  #rundown {
@@ -160,6 +160,65 @@
      font-family: 'Barriecito', cursive;
      font-size: 20px;
      z-index: 10;
+ }
+ 
+ #hxs {
+     grid-area: more;
+     padding-left: 2em;
+     padding-right: 2em;
+     padding-top: 1em;
+     padding-bottom: 1em;
+     background-color: #0e0d0d;
+     color: #FFC5CD;
+     border: 6px solid #FFC5CD;
+     border-radius: 15px;
+     font-family: 'Barriecito', cursive;
+     font-size: 20px;
+     z-index: 10;
+     line-height: 1.5em;
+     position: relative;
+ }
+ 
+ #kinnies {
+     grid-area: null;
+     padding-left: 2em;
+     padding-right: 2em;
+     padding-top: 1em;
+     padding-bottom: 1em;
+     background-color: #FFC5CD;
+     color: #0e0d0d;
+     border: 6px solid #000000;
+     border-radius: 15px;
+     font-family: 'Barriecito', cursive;
+     font-size: 20px;
+     z-index: 10;
+     line-height: 1.5em;
+     position: relative;
+ }
+ 
+ .hr1 {
+     border: 0;
+     height: 16px;
+     width: auto;
+     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2836cb-5893-4a6c-b156-5a89d94fc721/db1ecvu-dfa8e61c-f56c-4405-b300-adec0c758fda.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMjgzNmNiLTU4OTMtNGE2Yy1iMTU2LTVhODlkOTRmYzcyMVwvZGIxZWN2dS1kZmE4ZTYxYy1mNTZjLTQ0MDUtYjMwMC1hZGVjMGM3NThmZGEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GfaghPyPh2GC6F3PXYIfa0omqKm8YgzmUiOzV6ZhQhY");
+     background-repeat: repeat-x;
+ }
+ 
+ #uwu {
+     position: absolute;
+     right: 1em;
+     bottom: 1em;
+ }
+ 
+ #owo {
+     border: 0;
+     height: 99px;
+     background-image: url(" https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2836cb-5893-4a6c-b156-5a89d94fc721/db5i1a2-8911af03-5b6a-434b-ab28-591ff9df444a.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMjgzNmNiLTU4OTMtNGE2Yy1iMTU2LTVhODlkOTRmYzcyMVwvZGI1aTFhMi04OTExYWYwMy01YjZhLTQzNGItYWIyOC01OTFmZjlkZjQ0NGEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Nrij1UdvZDJtWJvrUCGPI3nyPqOmdjZbivCDYHlMiqM");
+     background-repeat: repeat-x;
+ }
+ 
+ ul {
+     list-style-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/768df49b-9b9a-45f9-b8b9-56558c7b0cfb/d79d9ns-78785fc4-ec74-4038-b0cf-cb36b53cb802.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc2OGRmNDliLTliOWEtNDVmOS1iOGI5LTU2NTU4YzdiMGNmYlwvZDc5ZDlucy03ODc4NWZjNC1lYzc0LTQwMzgtYjBjZi1jYjM2YjUzY2I4MDIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RvnRSSEzk7Mxz-qT24OzuFIPmZ3rBBk6c56A7P0t3a4');
  }
  
  a:link {
